@@ -1,4 +1,47 @@
 site_name: Chitta Doc Hub
+site_description: A personal documentation hub with blogs and resources.
 site_url: https://www.chittapriyamondal.com/
+nav:
+  - Home: index.md
+  - About: about.md
+  - Blog:
+      - Overview: blog/index.md
+      - Writing with MkDocs: blog/posts/first-blog.md
+      - Creating a Modern Blog: blog/posts/second-blog.md
 theme:
   name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: material/hexagon
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - navigation.tabs
+    - navigation.expand
+    - content.code.annotate
+    - content.tabs.link
+    - toc.integrate
+    - search.highlight
+    - search.share
+  repo_url: https://github.com/Chittapriya/chitta-doc-hub
+  repo_name: GitHub
+plugins:
+  - search
+  - blog
