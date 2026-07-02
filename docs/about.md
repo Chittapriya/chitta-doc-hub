@@ -1,5 +1,7 @@
 # About Me -
 
+![Profile Picture](assets/my-profile/profile-photo.jpg)
+
 <img src="assets/my-profile/profile-photo.jpg" alt="Chittapriya Mondal" style="float:right; margin:0 0 1rem 1rem; width:300px; max-width:40%; height:auto;" loading="lazy">
 
 I am Chittapriya Mondal, a technology leader with deep expertise in Autonomous Agent Architecture, Microservices, Event‑Driven Systems, IoT/IIoT, Cloud Platforms (Azure & AWS), Big Data, AI/ML, SaaS, and Open‑Source Technologies. My core specialization lies in designing and scaling enterprise‑grade autonomous agent ecosystems that enable intelligent automation, operational resilience, and transformative digital outcomes.
