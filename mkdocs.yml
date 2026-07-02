@@ -1,8 +1,6 @@
 site_name: Chitta Doc Hub
 site_description: A personal documentation hub with blogs and resources.
 site_url: https://www.chittapriyamondal.com/
-extra_files:
-  - CNAME
 nav:
   - Home: index.md
   - About: about.md
