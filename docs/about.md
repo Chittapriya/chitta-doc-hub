@@ -1,4 +1,4 @@
-# About Me
+# About Me -
 
 <img src="/blog/assets/my-profile/profile-photo.jpg" alt="Chittapriya Mondal" style="float:right; margin:0 0 1rem 1rem; width:300px; max-width:40%; height:auto;" loading="lazy">
 
