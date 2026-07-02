@@ -1,7 +1,7 @@
 ---
 title: Writing with MkDocs
 date: 2026-07-01
-author: Chitta
+author: Chittapriya Mondal
 ---
 
 # Writing with MkDocs
