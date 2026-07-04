@@ -4,6 +4,7 @@ Welcome to the Blog section. This page is the central place for curated posts an
 
 ## Featured posts
 
+- [Digital Twin & Actor Model](posts/digital-twin-actor-model/digital-twin-actor-model.md)
 - [Writing with MkDocs](posts/first-blog.md)
 - [Creating a Modern Blog](posts/second-blog.md)
 

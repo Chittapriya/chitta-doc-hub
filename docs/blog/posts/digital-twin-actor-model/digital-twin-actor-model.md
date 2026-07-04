@@ -8,8 +8,7 @@ tags:
   - Actor
   - Azure
 ---
-
-# Introduction
+# Step towards DIGITAL TWIN using Actor Model based Micro services
 
 <p align="center">
   <img src="/blog/digital-twin-actor-model/dtacm-mirror.jpg" alt="Digital Twin Actor Model" />
@@ -25,7 +24,7 @@ Stateless services need to maintain state in a separate persistence store. In th
 
 Azure service fabric is a micro services platform to build scalable and reliable micro services. This is a PaaS offering from Microsoft. It supports container based apps, Stateless service, Stateful service and Actor service.  For more information refer [Azure Service Fabric](https://learn.microsoft.com/en-in/azure/service-fabric/service-fabric-overview)
 
-## Actors and Digital Twin in IoT world
+## Actors and Digital Twin and IoT
 
 Actors are independent single unit of state and logic. It is based on [Actor Pattern](https://en.wikipedia.org/wiki/Actor_model). Actors are computational units deployed with a large number and executes simultaneously and independently of each other. They can communicate with each other and also can create more actors.
 
@@ -40,7 +39,7 @@ Following are few use cases that can be addressed –
 - Combination of digital twin and 3D modeling enables better visualization for both creation and - monitoring of physical devices
 - Artificial Intelligence and Machine Learning modules can be integrated with Digital Twin.
 
-## Typical/Sample Architecture – Service Fabric Actor and IoT
+## Architecture – Service Fabric Actor and IoT
 
 <p align="center">
   <img src="/blog/digital-twin-actor-model/dtacm-arc.jpg" alt="Actor Model IoT Architecture" />
