@@ -7,7 +7,7 @@ nav:
   - Blog:
       - Overview: blog/index.md
       - Digital Twin & Actor Model : blog/posts/digital-twin-actor-model/digital-twin-actor-model.md
-      - Creating a Modern Blog: blog/posts/first-blog.md
+      - Internet Protocol Suite: blog/posts/internet-protocol-suite/internet-protocol-suite.md
 theme:
   name: material
   language: en
