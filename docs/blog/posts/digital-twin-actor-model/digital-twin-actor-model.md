@@ -1,5 +1,5 @@
 ---
-title: DIGITAL TWIN & Actor Model
+title: Digital Twin & Actor Model
 date: 2017-11-13
 author: Chittapriya Mondal
 tags:
@@ -8,7 +8,7 @@ tags:
   - Actor
   - Azure
 ---
-# DIGITAL TWIN & Actor Model
+# Digital Twin & Actor Model
 
 <p align="center">
   <img src="/blog/digital-twin-actor-model/dtacm-mirror.jpg" alt="Digital Twin Actor Model" />
