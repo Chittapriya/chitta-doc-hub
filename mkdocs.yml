@@ -6,8 +6,8 @@ nav:
   - About: about.md
   - Blog:
       - Overview: blog/index.md
-      - Writing with MkDocs: blog/posts/first-blog.md
-      - Creating a Modern Blog: blog/posts/second-blog.md
+      - Digital Twin & Actor Model : blog/posts/digital-twin-actor-model/digital-twin-actor-model.md
+      - Creating a Modern Blog: blog/posts/first-blog.md
 theme:
   name: material
   language: en
