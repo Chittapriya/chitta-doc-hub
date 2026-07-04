@@ -5,8 +5,8 @@ Welcome to the Blog section. This page is the central place for curated posts an
 ## Featured posts
 
 - [Digital Twin & Actor Model](posts/digital-twin-actor-model/digital-twin-actor-model.md)
-- [Writing with MkDocs](posts/first-blog.md)
-- [Creating a Modern Blog](posts/second-blog.md)
+- [Internet Protocol Suite](posts/internet-protocol-suite/internet-protocol-suite.md)
+- [WSL2 on Windows](posts/wsl2-on-windows/wsl2-on-windows.md)
 
 ## What to expect
 
