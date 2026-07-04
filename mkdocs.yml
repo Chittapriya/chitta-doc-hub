@@ -45,3 +45,4 @@ theme:
 plugins:
   - search
   - blog
+  - tags
