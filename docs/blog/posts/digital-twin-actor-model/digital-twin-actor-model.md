@@ -1,5 +1,5 @@
 ---
-title: Step towards DIGITAL TWIN using Actor Model based Micro services
+title: DIGITAL TWIN & Actor Model
 date: 2017-11-13
 author: Chittapriya Mondal
 tags:
@@ -8,7 +8,7 @@ tags:
   - Actor
   - Azure
 ---
-# Step towards DIGITAL TWIN using Actor Model based Micro services
+# DIGITAL TWIN & Actor Model
 
 <p align="center">
   <img src="/blog/digital-twin-actor-model/dtacm-mirror.jpg" alt="Digital Twin Actor Model" />
