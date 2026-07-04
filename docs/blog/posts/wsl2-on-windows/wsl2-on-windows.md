@@ -1,6 +1,6 @@
 ---
 title: WSL2 on Windows
-date: 2022-01-28
+date: 2023-01-23
 author: Chittapriya Mondal
 tags:
   - WSL2
