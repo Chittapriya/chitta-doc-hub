@@ -8,6 +8,7 @@ nav:
       - Overview: blog/index.md
       - Digital Twin & Actor Model : blog/posts/digital-twin-actor-model/digital-twin-actor-model.md
       - Internet Protocol Suite: blog/posts/internet-protocol-suite/internet-protocol-suite.md
+      - WSL2 on WINDOWS: blog/posts/wsl2-on-windows/wsl2-on-windows.md
 theme:
   name: material
   language: en
