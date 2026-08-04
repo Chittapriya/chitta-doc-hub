@@ -6,6 +6,7 @@ nav:
   - About: about.md
   - Blog:
       - Overview: blog/index.md
+      - Autonomy in Modern AI Systems: blog/posts/agent-autonomy/controlled-vs-governed-autonomy.md
       - Digital Twin & Actor Model : blog/posts/digital-twin-actor-model/digital-twin-actor-model.md
       - Internet Protocol Suite: blog/posts/internet-protocol-suite/internet-protocol-suite.md
       - WSL2 on WINDOWS: blog/posts/wsl2-on-windows/wsl2-on-windows.md
