@@ -20,6 +20,7 @@ The personal blog of Chittapriya Mondal, at https://www.chittapriyamondal.com. I
 | Insights grid + tag filter | `src/pages/insights/index.astro` |
 | Card design | `src/components/PostCard.astro` |
 | Header / nav / logo | `src/components/Header.astro`, `src/components/Logo.astro` |
+| GitHub / LinkedIn profile links (used on About) | `src/components/SocialLinks.astro` |
 | `<head>`, footer, SEO meta | `src/layouts/Base.astro` |
 | Colors, Markdown (`.prose`) styles | `src/styles/global.css` |
 | Old-URL redirects, site URL | `astro.config.mjs` |
