@@ -26,7 +26,7 @@ fs.writeFileSync(
   <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#075985"/><stop offset="1" stop-color="#0E7490"/></linearGradient></defs>
   <rect width="800" height="420" fill="url(#bg)"/>
   <text x="60" y="200" fill="#FFFFFF" font-size="44" font-weight="700">${xml(title)}</text>
-  <text x="60" y="250" fill="#BAE6FD" font-size="20">CHITTA Labs</text>
+  <text x="60" y="250" fill="#BAE6FD" font-size="20">Chittapriya Mondal</text>
 </svg>
 `,
 );

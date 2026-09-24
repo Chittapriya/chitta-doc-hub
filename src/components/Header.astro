@@ -4,7 +4,7 @@ import Logo from './Logo.astro';
 const path = Astro.url.pathname;
 const links = [
   { href: '/', label: 'Home' },
-  { href: '/blog/', label: 'Blog' },
+  { href: '/insights/', label: 'Insights' },
   { href: '/about/', label: 'About' },
 ];
 const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
@@ -12,9 +12,12 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
 
 <header class="site-header">
   <div class="container bar">
-    <a href="/" class="brand" aria-label="CHITTA Labs — home">
-      <Logo size={32} />
-      <span class="name">CHITTA <span class="labs">Labs</span></span>
+    <a href="/" class="brand" aria-label="Chittapriya Mondal — home">
+      <Logo size={34} />
+      <span class="text">
+        <span class="name">Chittapriya Mondal</span>
+        <span class="role">Architect · AI &amp; Autonomous Systems</span>
+      </span>
     </a>
     <nav aria-label="Main">
       {links.map((l) => (
@@ -37,11 +40,12 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
   }
   .bar { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 1rem; }
   .brand {
-    display: flex; align-items: center; gap: 0.55rem;
-    font-weight: 800; font-size: 1.1rem; color: var(--text); text-decoration: none; white-space: nowrap;
+    display: flex; align-items: center; gap: 0.65rem;
+    color: var(--text); text-decoration: none; white-space: nowrap; min-width: 0;
   }
-  .name { letter-spacing: 0.04em; }
-  .labs { font-weight: 500; letter-spacing: 0; color: var(--primary); }
+  .text { display: flex; flex-direction: column; line-height: 1.2; }
+  .name { font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em; }
+  .role { font-size: 0.75rem; font-weight: 500; color: var(--text-muted); }
   nav { display: flex; align-items: center; gap: 0.25rem; }
   nav a {
     padding: 0.4rem 0.7rem; border-radius: 8px;
@@ -49,8 +53,20 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
   }
   nav a:hover { color: var(--text); background: var(--surface-2); }
   nav a.active { color: var(--primary); background: var(--primary-soft); }
+  @media (max-width: 720px) {
+    .role { display: none; }
+  }
   @media (max-width: 560px) {
+    .brand { gap: 0.5rem; }
+    .name { font-size: 0.95rem; }
+    nav { gap: 0; }
+    nav a { padding: 0.4rem 0.45rem; font-size: 0.88rem; }
+  }
+  @media (max-width: 420px) {
+    .name { font-size: 0.9rem; }
+    nav a { padding: 0.35rem 0.4rem; font-size: 0.85rem; }
+  }
+  @media (max-width: 360px) {
     .name { display: none; }
-    nav a { padding: 0.4rem 0.5rem; font-size: 0.9rem; }
   }
 </style>

@@ -29,7 +29,7 @@ const coverInBody = (post.body ?? '').includes(`${coverName}.`);
 <Base title={title} description={description}>
   <article>
     <header class="post-head container">
-      <a class="back" href="/blog/">← All posts</a>
+      <a class="back" href="/insights/">← All insights</a>
       <div class="tags">
         {tags.map((t) => <a class="tag" href={`/tags/${tagSlug(t)}/`}>{t}</a>)}
       </div>
@@ -71,10 +71,10 @@ const coverInBody = (post.body ?? '').includes(`${coverName}.`);
 
     <nav class="container pager" aria-label="More posts">
       {newer ? (
-        <a href={`/blog/${newer.id}/`} class="newer"><span>← Newer</span>{newer.data.title}</a>
+        <a href={`/insights/${newer.id}/`} class="newer"><span>← Newer</span>{newer.data.title}</a>
       ) : <span />}
       {older && (
-        <a href={`/blog/${older.id}/`} class="older"><span>Older →</span>{older.data.title}</a>
+        <a href={`/insights/${older.id}/`} class="older"><span>Older →</span>{older.data.title}</a>
       )}
     </nav>
   </article>

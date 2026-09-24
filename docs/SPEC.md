@@ -1,4 +1,4 @@
-# CHITTA Labs — Specification
+# chittapriyamondal.com — Specification
 
 Status: live · Stack: Astro 7 (static) · Hosting: GitHub Pages, custom domain `www.chittapriyamondal.com`
 
@@ -13,12 +13,12 @@ A personal site for Chittapriya Mondal to publish long-form technical articles o
 | Route | Content |
 |---|---|
 | `/` | Hero section (photo, one-line intro, links to Blog and About), the latest 3 posts as cards, and topic chips linking to tag pages |
-| `/blog/` | All published posts as cards, newest first, with tag filter chips |
-| `/blog/<slug>/` | A single post (see 2.3) |
+| `/insights/` | All published posts as cards, newest first, with tag filter chips (menu label "Insights") |
+| `/insights/<slug>/` | A single post (see 2.3) |
 | `/tags/` | All tags with post counts |
 | `/tags/<tag-slug>/` | Cards for posts with that tag |
 | `/about/` | Author bio and photo |
-| `/blog/YYYY/MM/DD/<old-slug>/` | Redirects from the old MkDocs URLs to the new post URLs. They must keep working. |
+| `/blog/YYYY/MM/DD/<old-slug>/`, `/blog/`, `/blog/<slug>/` | Redirects to the matching `/insights/…` page: first the old MkDocs URLs, then the addresses the section briefly used before it was renamed. They must keep working. |
 
 ### 2.2 Post cards
 - **R-CARD-1** Each card shows the cover image, date, reading time, title, description and up to 3 tags.
@@ -41,8 +41,8 @@ A personal site for Chittapriya Mondal to publish long-form technical articles o
 - **R-POST-6** Code blocks are syntax-highlighted with Shiki's `github-light` theme.
 
 ### 2.4 Blog filtering
-- **R-FILTER-1** Tag chips on `/blog/` filter the cards on the page, with no reload.
-- **R-FILTER-2** The selected filter is saved in the URL hash (`/blog/#ai`) and restored on load.
+- **R-FILTER-1** Tag chips on `/insights/` filter the cards on the page, with no reload.
+- **R-FILTER-2** The selected filter is saved in the URL hash (`/insights/#ai`) and restored on load.
 - **R-FILTER-3** When no card matches, a "no posts" message is shown.
 - **R-FILTER-4** On narrow screens the chips sit in a single row that scrolls sideways.
 
@@ -58,7 +58,7 @@ A personal site for Chittapriya Mondal to publish long-form technical articles o
 
 ## 3. Non-functional requirements
 - **NFR-1 Static only.** No server, database or runtime API. The output is plain HTML/CSS/JS in `dist/`.
-- **NFR-2 Performance.** Images are optimised to WebP at build time. Below-the-fold images load lazily. Only two small scripts ship: the tag filter on `/blog/`, and the zoom viewer on post pages, which is loaded on demand.
+- **NFR-2 Performance.** Images are optimised to WebP at build time. Below-the-fold images load lazily. Only two small scripts ship: the tag filter on `/insights/`, and the zoom viewer on post pages, which is loaded on demand.
 - **NFR-3 Accessibility.** Semantic landmarks (`header`, `nav`, `main`, `article`, `footer`), alt text on content images, keyboard access for cards, filters and zoom, and `aria-pressed` on filter chips.
 - **NFR-4 Responsive.** No horizontal scroll at 390px. The layout is tested at 390px and 1280px.
 - **NFR-5 SEO.** Every page has a `<title>`, meta description, canonical URL and Open Graph title/description. URLs are stable, with trailing slashes.
@@ -66,7 +66,8 @@ A personal site for Chittapriya Mondal to publish long-form technical articles o
 - **NFR-7 Quality gate.** `npm test` (`astro check` + `astro build`) must pass with 0 errors. CI enforces this on every push and pull request.
 
 ## 4. Design system
-- **Brand:** the name is written **CHITTA Labs**: "CHITTA" in capitals and bold, "Labs" in medium weight and `--primary` colour. The logo mark (`src/components/Logo.astro`, and `public/favicon.svg` with the same shape) is a white open "C" ring with a centre dot, on a rounded square with a sky-blue→cyan gradient (`#0284c7` → `#22d3ee`). The site name is set in one constant in `src/layouts/Base.astro`, which builds the page titles; the header and home page write it directly.
+- **Menu:** Home · Insights · About. The Insights section lives at `/insights/…`. Its posts are stored in `src/content/blog/`. A "Work" section for case studies is planned but not added yet.
+- **Brand:** this is a personal brand site. The header shows the logo, then **Chittapriya Mondal** in bold with a small role line underneath ("Architect · AI & Autonomous Systems"). The role line is hidden below 720px and the name below 400px. "CHITTA Labs" is reserved as a possible future section or business name and is not used as the site name. The logo mark (`src/components/Logo.astro`, and `public/favicon.svg` with the same shape) is a white open "C" ring with a centre dot, on a rounded square with a sky-blue→cyan gradient (`#0284c7` → `#22d3ee`). The site name is set in one constant in `src/layouts/Base.astro`, which builds the page titles; the header and home page write it directly.
 - Colors are CSS custom properties in `src/styles/global.css`, light theme only:
   - `--primary` `#0369a1` (deep sky blue) for links, buttons and active states
   - `--accent` `#0e7490` (cyan-teal) for small labels, blockquote borders and button hover

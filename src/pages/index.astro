@@ -10,18 +10,18 @@ const latest = posts.slice(0, 3);
 const tags = allTags(posts).slice(0, 8);
 ---
 
-<Base title="CHITTA Labs">
+<Base title="Chittapriya Mondal">
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <p class="eyebrow">CHITTA Labs</p>
+        <p class="eyebrow">Hi, I'm Chittapriya Mondal</p>
         <h1>Notes on AI, architecture &amp; building systems that scale.</h1>
         <p class="lead">
-          Articles by <strong>Chittapriya Mondal</strong> on autonomous agents, AI models,
+          Architect and technology leader writing about autonomous agents, AI models,
           distributed systems, IoT and cloud engineering.
         </p>
         <div class="actions">
-          <a class="btn" href="/blog/">Read the blog →</a>
+          <a class="btn" href="/insights/">Read insights →</a>
           <a class="link" href="/about/">About me</a>
         </div>
       </div>
@@ -32,7 +32,7 @@ const tags = allTags(posts).slice(0, 8);
   <section class="container">
     <div class="section-head">
       <h2>Latest posts</h2>
-      <a href="/blog/">All posts →</a>
+      <a href="/insights/">All insights →</a>
     </div>
     <div class="post-grid">
       {latest.map((post, i) => <PostCard post={post} eager={i < 3} />)}

@@ -1,4 +1,4 @@
-# CHITTA Labs
+# chittapriyamondal.com
 
 Personal blog of Chittapriya Mondal, live at **[www.chittapriyamondal.com](https://www.chittapriyamondal.com)**.
 It is a static site built with [Astro](https://astro.build) and deployed to GitHub Pages.
@@ -35,9 +35,9 @@ npm run preview    # open http://localhost:4321 and click through
 ```
 
 Things to check in the browser:
-- Home, **Blog** and **About** load (tag pages are reached from post tags and the home page's Topics).
+- Home, **Insights** (`/insights/`) and **About** load (tag pages are reached from post tags and the home page's Topics).
 - Cards open their posts.
-- Tag filters on `/blog/` work.
+- Tag filters on `/insights/` work, and an old address like `/blog/system-one-model/` redirects to `/insights/system-one-model/`.
 - Clicking an image in a post opens the zoom viewer: `+`/`−` buttons, mouse wheel, `Esc` to close.
 
 ## Writing a post
@@ -68,7 +68,7 @@ draft: false                     # optional; true hides the post
 ---
 ```
 
-The post is published at `/blog/<folder-name>/`.
+The post is published at `/insights/<folder-name>/`.
 
 ### Diagrams
 

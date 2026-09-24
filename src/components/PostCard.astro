@@ -21,7 +21,7 @@ const { title, description, date, tags, cover, coverFit } = post.data;
       <span aria-hidden="true">·</span>
       <span>{readingTime(post.body)} min read</span>
     </div>
-    <h3><a href={`/blog/${post.id}/`}>{title}</a></h3>
+    <h3><a href={`/insights/${post.id}/`}>{title}</a></h3>
     <p>{description}</p>
     <div class="tags">
       {tags.slice(0, 3).map((t) => <span class="tag">{t}</span>)}
