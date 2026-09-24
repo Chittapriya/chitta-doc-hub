@@ -35,7 +35,7 @@ npm run preview    # open http://localhost:4321 and click through
 ```
 
 Things to check in the browser:
-- Home, **Blog**, **Tags** and **About** load.
+- Home, **Blog** and **About** load (tag pages are reached from post tags and the home page's Topics).
 - Cards open their posts.
 - Tag filters on `/blog/` work.
 - Clicking an image in a post opens the zoom viewer: `+`/`−` buttons, mouse wheel, `Esc` to close.
