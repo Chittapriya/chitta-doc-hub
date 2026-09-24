@@ -1,0 +1,78 @@
+<mxfile host="drawio">
+  <diagram id="jev-arch" name="Jev Architecture">
+    <mxGraphModel dx="1200" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="560" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="System One Model (Jev) — Request Flow &amp; Architecture" style="text;html=1;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="20" y="10" width="1120" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="app" value="Your Application" style="swimlane;startSize=30;rounded=1;arcSize=6;fillColor=#EFF6FF;strokeColor=#3B82F6;fontStyle=1;fontSize=14;fontColor=#1E3A8A;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="260" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="state" value="&lt;b&gt;Application State&lt;/b&gt;&lt;br&gt;ticket, record, log line,&lt;br&gt;game frame, page…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=12;" vertex="1" parent="app">
+          <mxGeometry x="40" y="50" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="questions" value="&lt;b&gt;Typed Questions&lt;/b&gt;&lt;br&gt;Choice · Score · Noul&lt;br&gt;(defined in advance)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#3B82F6;fontSize=12;" vertex="1" parent="app">
+          <mxGeometry x="40" y="160" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sdk" value="&lt;b&gt;TypeSafe SDK / REST&lt;/b&gt;&lt;br&gt;one request: state + questions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#1D4ED8;fontSize=12;" vertex="1" parent="app">
+          <mxGeometry x="40" y="280" width="190" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ts" value="TypeSafe Platform — Jev (System One Model)" style="swimlane;startSize=30;rounded=1;arcSize=4;fillColor=#F5F3FF;strokeColor=#7C3AED;fontStyle=1;fontSize=14;fontColor=#4C1D95;" vertex="1" parent="1">
+          <mxGeometry x="340" y="60" width="460" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="api" value="&lt;b&gt;API&lt;/b&gt;  POST /v1/systemone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7C3AED;fontSize=12;" vertex="1" parent="ts">
+          <mxGeometry x="130" y="45" width="200" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="enc" value="&lt;b&gt;State Encoder&lt;/b&gt;&lt;br&gt;reads structured state once" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;fontSize=12;" vertex="1" parent="ts">
+          <mxGeometry x="130" y="115" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="grp" value="Parallel sampler — every question evaluated in one pass" style="swimlane;startSize=24;rounded=1;arcSize=8;dashed=1;fillColor=none;swimlaneFillColor=#FAF5FF;strokeColor=#7C3AED;fontStyle=2;fontSize=11;fontColor=#6D28D9;swimlaneLine=0;" vertex="1" parent="ts">
+          <mxGeometry x="10" y="190" width="440" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="h1" value="&lt;b&gt;Choice&lt;/b&gt;&lt;br&gt;pick 1 of N options" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7C3AED;fontSize=11;" vertex="1" parent="grp">
+          <mxGeometry x="12" y="32" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" value="&lt;b&gt;Score&lt;/b&gt;&lt;br&gt;rate on a rubric" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7C3AED;fontSize=11;" vertex="1" parent="grp">
+          <mxGeometry x="155" y="32" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" value="&lt;b&gt;Noul&lt;/b&gt;&lt;br&gt;P(yes) in 0–1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7C3AED;fontSize=11;" vertex="1" parent="grp">
+          <mxGeometry x="298" y="32" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cal" value="&lt;b&gt;Calibration&lt;/b&gt;  (trained with RLCD)&lt;br&gt;type-constrained outputs · honest probabilities" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EDE9FE;strokeColor=#7C3AED;fontSize=12;" vertex="1" parent="ts">
+          <mxGeometry x="80" y="310" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="out" value="&lt;b&gt;Typed Answers&lt;/b&gt;&lt;br&gt;value + probability distribution + confidence" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDD6FE;strokeColor=#5B21B6;fontSize=12;" vertex="1" parent="ts">
+          <mxGeometry x="80" y="380" width="300" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dec" value="Decision Logic (your code)" style="swimlane;startSize=30;rounded=1;arcSize=6;fillColor=#ECFDF5;strokeColor=#059669;fontStyle=1;fontSize=14;fontColor=#064E3B;" vertex="1" parent="1">
+          <mxGeometry x="860" y="60" width="280" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="act" value="&lt;b&gt;Act automatically&lt;/b&gt;&lt;br&gt;branch · route · sort · filter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D1FAE5;strokeColor=#059669;fontSize=12;" vertex="1" parent="dec">
+          <mxGeometry x="40" y="60" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="esc" value="&lt;b&gt;Escalate&lt;/b&gt;&lt;br&gt;LLM (System 2) or human review" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;fontSize=12;" vertex="1" parent="dec">
+          <mxGeometry x="40" y="200" width="200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="gate" value="confidence ≥&lt;br&gt;threshold?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;fontSize=12;" vertex="1" parent="dec">
+          <mxGeometry x="50" y="352" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#3B82F6;exitX=0;exitY=0.5;entryX=0;entryY=0.3;" edge="1" parent="1" source="state" target="sdk"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="40" y="145" /><mxPoint x="40" y="358" /></Array></mxGeometry></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#3B82F6;" edge="1" parent="1" source="questions" target="sdk"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#1D4ED8;strokeWidth=2;fontSize=10;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="sdk" target="api"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="310" y="370" /><mxPoint x="310" y="127" /></Array></mxGeometry></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7C3AED;" edge="1" parent="1" source="api" target="enc"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7C3AED;" edge="1" parent="1" source="enc" target="grp"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7C3AED;" edge="1" parent="1" source="grp" target="cal"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7C3AED;" edge="1" parent="1" source="cal" target="out"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e12" value="70–500 ms" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#5B21B6;strokeWidth=2;fontSize=10;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="out" target="gate"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e13" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#059669;fontSize=11;labelBackgroundColor=#ECFDF5;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="gate" target="act"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1120" y="462" /><mxPoint x="1120" y="147" /></Array></mxGeometry></mxCell>
+        <mxCell id="e14" value="no" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D97706;fontSize=11;labelBackgroundColor=#ECFDF5;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="gate" target="esc"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
