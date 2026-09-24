@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getPosts, allTags } from '../../lib/posts';
+
+const tags = allTags(await getPosts());
+---
+
+<Base title="Tags">
+  <section class="container wrap">
+    <p class="eyebrow">Browse</p>
+    <h1>Tags</h1>
+    <div class="list">
+      {tags.map((t) => (
+        <a class="tag" href={`/tags/${t.slug}/`}>{t.name} <span>{t.count}</span></a>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .wrap { padding-top: 3rem; }
+  h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 0.3rem 0 1.5rem; }
+  .list { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+  .tag { font-size: 1rem; padding: 0.5rem 1rem; }
+  .tag span { opacity: 0.6; margin-left: 0.2rem; }
+</style>

@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getPosts, allTags, tagSlug, type Post } from '../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return allTags(posts).map((t) => ({
+    params: { tag: t.slug },
+    props: { name: t.name, posts: posts.filter((p) => p.data.tags.some((x) => tagSlug(x) === t.slug)) },
+  }));
+}
+
+const { name, posts } = Astro.props as { name: string; posts: Post[] };
+---
+
+<Base title={`#${name}`}>
+  <section class="container head">
+    <a href="/tags/">← All tags</a>
+    <h1>#{name}</h1>
+    <p>{posts.length} {posts.length === 1 ? 'post' : 'posts'}</p>
+  </section>
+  <section class="container">
+    <div class="post-grid">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .head { padding: 3rem 16px 1.5rem; }
+  .head a { font-weight: 600; text-decoration: none; font-size: 0.92rem; }
+  h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 0.8rem 0 0.2rem; }
+  .head p { color: var(--text-muted); margin: 0; }
+</style>

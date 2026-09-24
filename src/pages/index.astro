@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import PostCard from '../components/PostCard.astro';
+import profile from '../assets/profile.jpg';
+import { getPosts, allTags } from '../lib/posts';
+
+const posts = await getPosts();
+const latest = posts.slice(0, 3);
+const tags = allTags(posts).slice(0, 8);
+---
+
+<Base title="CHITTA Labs">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">CHITTA Labs</p>
+        <h1>Notes on AI, architecture &amp; building systems that scale.</h1>
+        <p class="lead">
+          Articles by <strong>Chittapriya Mondal</strong> on autonomous agents, AI models,
+          distributed systems, IoT and cloud engineering.
+        </p>
+        <div class="actions">
+          <a class="btn" href="/blog/">Read the blog →</a>
+          <a class="link" href="/about/">About me</a>
+        </div>
+      </div>
+      <Image src={profile} alt="Chittapriya Mondal" width={320} class="avatar" loading="eager" />
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-head">
+      <h2>Latest posts</h2>
+      <a href="/blog/">All posts →</a>
+    </div>
+    <div class="post-grid">
+      {latest.map((post, i) => <PostCard post={post} eager={i < 3} />)}
+    </div>
+  </section>
+
+  <section class="container topics">
+    <h2>Topics</h2>
+    <div class="topic-list">
+      {tags.map((t) => <a class="tag" href={`/tags/${t.slug}/`}>{t.name} <span>{t.count}</span></a>)}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    padding: 4.5rem 0 3.5rem;
+    background:
+      radial-gradient(600px 300px at 85% 20%, color-mix(in srgb, var(--glow-2) 45%, transparent), transparent),
+      radial-gradient(700px 360px at 10% 0%, color-mix(in srgb, var(--glow-1) 40%, transparent), transparent);
+  }
+  .hero-grid { display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center; }
+  h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); line-height: 1.12; margin: 0.4rem 0 1rem; letter-spacing: -0.02em; }
+  .lead { font-size: 1.15rem; color: var(--text-muted); max-width: 38rem; margin: 0 0 1.8rem; }
+  .actions { display: flex; align-items: center; gap: 1.2rem; }
+  .link { font-weight: 600; text-decoration: none; }
+  .avatar {
+    width: 240px; height: 240px; object-fit: cover; border-radius: 50%;
+    border: 6px solid var(--surface); box-shadow: var(--shadow-hover);
+  }
+  .section-head { display: flex; justify-content: space-between; align-items: baseline; margin: 1rem 0 1.4rem; }
+  .section-head h2, .topics h2 { font-size: 1.6rem; margin: 0; }
+  .section-head a { font-weight: 600; text-decoration: none; }
+  .topics { margin-top: 4rem; }
+  .topic-list { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.2rem; }
+  .topic-list .tag { font-size: 0.9rem; padding: 0.4rem 0.9rem; }
+  .topic-list .tag span { opacity: 0.6; margin-left: 0.2rem; }
+  @media (max-width: 720px) {
+    .hero { padding: 2.5rem 0 2rem; }
+    .hero-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .avatar { order: -1; width: 120px; height: 120px; border-width: 4px; }
+  }
+</style>

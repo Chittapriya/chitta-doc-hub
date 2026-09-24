@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="Segoe UI, Roboto, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0C4A6E"/>
+      <stop offset="1" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <g transform="translate(70 90)">
+    <rect width="330" height="240" rx="12" fill="#0B1A2A" stroke="#38BDF8" stroke-width="2"/>
+    <rect width="330" height="32" rx="12" fill="#16304A"/>
+    <rect y="20" width="330" height="12" fill="#16304A"/>
+    <circle cx="20" cy="16" r="6" fill="#EF5350"/>
+    <circle cx="40" cy="16" r="6" fill="#FFCA28"/>
+    <circle cx="60" cy="16" r="6" fill="#66BB6A"/>
+    <g font-family="Consolas, 'Roboto Mono', monospace" font-size="15">
+      <text x="18" y="70" fill="#81C784">user@wsl</text>
+      <text x="96" y="70" fill="#FFFFFF">:~$ wsl --install</text>
+      <text x="18" y="100" fill="#B0BEC5">Installing: Ubuntu</text>
+      <text x="18" y="130" fill="#81C784">user@wsl</text>
+      <text x="96" y="130" fill="#FFFFFF">:~$ docker ps</text>
+      <text x="18" y="160" fill="#B0BEC5">CONTAINER ID   IMAGE</text>
+      <text x="18" y="190" fill="#81C784">user@wsl</text>
+      <text x="96" y="190" fill="#FFFFFF">:~$ _</text>
+    </g>
+  </g>
+  <text x="440" y="190" fill="#FFFFFF" font-size="44" font-weight="700">WSL2</text>
+  <text x="440" y="235" fill="#BAE6FD" font-size="22">Linux dev on Windows</text>
+  <text x="440" y="275" fill="#FFFFFF" fill-opacity="0.7" font-size="16">Setup · Tips · Docker</text>
+</svg>

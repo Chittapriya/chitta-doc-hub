@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import profile from '../assets/profile.jpg';
+---
+
+<Base title="About Me" description="About Chittapriya Mondal — technology leader in autonomous agent architecture, AI and cloud platforms.">
+  <article class="container page">
+    <h1>About Me</h1>
+    <div class="prose">
+      <Image src={profile} alt="Chittapriya Mondal" width={600} class="photo" />
+
+      <p>
+        I am Chittapriya Mondal, a technology leader with expertise in Autonomous Agent Architecture, Microservices,
+        Event‑Driven Systems, IoT/IIoT, Cloud Platforms (Azure &amp; AWS), Big Data, AI/ML, SaaS, and Open‑Source
+        Technologies. My core specialization lies in designing and scaling enterprise‑grade autonomous agent ecosystems
+        that enable intelligent automation, operational resilience, and transformative digital outcomes.
+      </p>
+      <p>
+        I am recognized for combining strategic architectural vision with the ability to dive deep into complex systems,
+        troubleshoot at the code and infrastructure level, and deliver hands‑on technical execution when it matters most.
+        My leadership approach blends system thinking, platform engineering discipline, and customer‑centric product
+        strategy to build solutions that are robust, scalable, and future‑ready.
+      </p>
+      <p>
+        I actively practice SAFe® for Lean Enterprises 5.0 and Scrum/Kanban, driving cross‑functional alignment,
+        iterative delivery, and engineering excellence across distributed teams. My focus is on building high‑impact
+        platforms, mentoring engineering and product teams, and accelerating innovation across enterprise, industrial,
+        and cloud‑native domains.
+      </p>
+      <p>
+        At the intersection of architecture, AI, and product strategy, I am passionate about shaping next‑generation
+        intelligent systems that elevate business performance and unlock new possibilities for digital transformation.
+      </p>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .page { max-width: 820px; padding-top: 3rem; }
+  h1 { font-size: 2.4rem; line-height: 1.2; margin-bottom: 1.5rem; }
+  .prose :global(.photo) {
+    float: right;
+    width: 280px;
+    max-width: 40%;
+    margin: 0 0 1rem 1.5rem;
+    border-radius: var(--radius);
+    cursor: default;
+  }
+  @media (max-width: 560px) {
+    .prose :global(.photo) { float: none; max-width: 60%; margin: 0 auto 1.5rem; }
+  }
+</style>

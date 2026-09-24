@@ -1,10 +1,35 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+# Dependencies
+node_modules/
 
-# Virtual environments
-.venv
+# Build output
+dist/
+.astro/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# draw.io temp/backup files
+*.drawio.bkp
+*.drawio.dtmp
+.$*.drawio*
+
+# Leftovers from the old MkDocs/Python setup
+.venv/
+site/
+__pycache__/
