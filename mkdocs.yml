@@ -13,6 +13,7 @@ nav:
       - WSL2 on WINDOWS: blog/posts/wsl2-on-windows/wsl2-on-windows.md
 theme:
   name: material
+  custom_dir: overrides
   language: en
   palette:
     - scheme: default
@@ -49,3 +50,8 @@ plugins:
   - search
   - blog
   - tags
+markdown_extensions:
+  - attr_list
+  - md_in_html
+extra_css:
+  - stylesheets/blog-cards.css
