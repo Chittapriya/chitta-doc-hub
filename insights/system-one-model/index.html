@@ -1,0 +1,304 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-hkbrpulz><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>System One Models and Jev — Fast, Typed Decisions for Software · Chittapriya Mondal</title><meta name="description" content="Fast, typed, calibrated decisions for software. How System One models differ from LLMs, and where to use them."><meta property="og:title" content="System One Models and Jev — Fast, Typed Decisions for Software · Chittapriya Mondal"><meta property="og:description" content="Fast, typed, calibrated decisions for software. How System One models differ from LLMs, and where to use them."><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://www.chittapriyamondal.com/insights/system-one-model/"><meta name="theme-color" content="#f5faff"><link rel="stylesheet" href="/_astro/_slug_.Cc_ZZLyy.css"><link rel="stylesheet" href="/_astro/Base.SZf2R4D5.css"><style>.post-head[data-astro-cid-6ebbwsfy]{text-align:center;max-width:860px;padding-top:2.5rem}.back[data-astro-cid-6ebbwsfy]{margin-bottom:1.4rem;font-size:.92rem;font-weight:600;text-decoration:none;display:inline-block}.tags[data-astro-cid-6ebbwsfy]{flex-wrap:wrap;justify-content:center;gap:.4rem;display:flex}h1[data-astro-cid-6ebbwsfy]{letter-spacing:-.02em;margin:1rem 0 .8rem;font-size:clamp(1.9rem,4.2vw,2.9rem);line-height:1.15}.desc[data-astro-cid-6ebbwsfy]{color:var(--text-muted);max-width:42rem;margin:0 auto 1rem;font-size:1.15rem}.meta[data-astro-cid-6ebbwsfy]{color:var(--text-muted);flex-wrap:wrap;justify-content:center;gap:.45rem;font-size:.9rem;display:flex}.hero-img[data-astro-cid-6ebbwsfy]{aspect-ratio:2;border-radius:var(--radius);border:1px solid var(--border);max-width:1000px;box-shadow:var(--shadow);background:#fff;margin:2rem auto 2.5rem;overflow:hidden}.spacer[data-astro-cid-6ebbwsfy]{border-bottom:1px solid var(--border);max-width:760px;height:2rem;margin:0 auto 1rem}.hero-img[data-astro-cid-6ebbwsfy] img[data-astro-cid-6ebbwsfy]{object-fit:cover;width:100%;height:100%}.hero-img[data-astro-cid-6ebbwsfy].contain img[data-astro-cid-6ebbwsfy]{object-fit:contain;padding:1rem}.layout[data-astro-cid-6ebbwsfy]{grid-template-columns:minmax(0,1fr);gap:3rem;max-width:1100px;display:grid}.prose[data-astro-cid-6ebbwsfy]{width:100%;max-width:760px;margin:0 auto}@media (width>=1080px){.layout[data-astro-cid-6ebbwsfy]{grid-template-columns:minmax(0,1fr) 240px}.prose[data-astro-cid-6ebbwsfy]{margin:0}}.toc[data-astro-cid-6ebbwsfy]{display:none}@media (width>=1080px){.toc[data-astro-cid-6ebbwsfy]{border-left:1px solid var(--border);align-self:start;max-height:calc(100vh - 7rem);padding-left:1rem;font-size:.86rem;display:block;position:sticky;top:5.5rem;overflow-y:auto}}.toc-title[data-astro-cid-6ebbwsfy]{text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin:0 0 .6rem;font-size:.75rem;font-weight:700}.toc[data-astro-cid-6ebbwsfy] ul[data-astro-cid-6ebbwsfy]{margin:0;padding:0;list-style:none}.toc[data-astro-cid-6ebbwsfy] li[data-astro-cid-6ebbwsfy]{margin:.35rem 0}.toc[data-astro-cid-6ebbwsfy] li[data-astro-cid-6ebbwsfy].d3{padding-left:.9rem}.toc[data-astro-cid-6ebbwsfy] a[data-astro-cid-6ebbwsfy]{color:var(--text-muted);text-decoration:none}.toc[data-astro-cid-6ebbwsfy] a[data-astro-cid-6ebbwsfy]:hover{color:var(--primary)}.pager[data-astro-cid-6ebbwsfy]{border-top:1px solid var(--border);grid-template-columns:1fr 1fr;gap:1rem;max-width:1100px;margin-top:4rem;padding-top:2rem;display:grid}.pager[data-astro-cid-6ebbwsfy] a[data-astro-cid-6ebbwsfy]{border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);flex-direction:column;gap:.3rem;padding:1rem 1.2rem;font-weight:600;text-decoration:none;display:flex}.pager[data-astro-cid-6ebbwsfy] a[data-astro-cid-6ebbwsfy]:hover{border-color:var(--primary)}.pager[data-astro-cid-6ebbwsfy] span[data-astro-cid-6ebbwsfy]{color:var(--text-muted);font-size:.8rem;font-weight:500}.pager[data-astro-cid-6ebbwsfy] .older[data-astro-cid-6ebbwsfy]{text-align:right;grid-column:2}@media (width<=640px){.pager[data-astro-cid-6ebbwsfy]{grid-template-columns:1fr}.pager[data-astro-cid-6ebbwsfy] .older[data-astro-cid-6ebbwsfy]{grid-column:1}}
+</style></head><body data-astro-cid-hkbrpulz><header class="site-header" data-astro-cid-nen7h5rs><div class="container bar" data-astro-cid-nen7h5rs><a href="/" class="brand" aria-label="Chittapriya Mondal — home" data-astro-cid-nen7h5rs><svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true" class="logo" data-astro-cid-f7espo7c><defs data-astro-cid-f7espo7c><linearGradient id="logo-gradient" x1="0" y1="0" x2="1" y2="1" data-astro-cid-f7espo7c><stop offset="0" stop-color="#0284c7" data-astro-cid-f7espo7c></stop><stop offset="1" stop-color="#22d3ee" data-astro-cid-f7espo7c></stop></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#logo-gradient)" data-astro-cid-f7espo7c></rect><path d="M21.66 10.34A8 8 0 1 0 21.66 21.66" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" data-astro-cid-f7espo7c></path><circle cx="16" cy="16" r="2.2" fill="#fff" data-astro-cid-f7espo7c></circle></svg><span class="text" data-astro-cid-nen7h5rs><span class="name" data-astro-cid-nen7h5rs>Chittapriya Mondal</span><span class="role" data-astro-cid-nen7h5rs>Technology Leader · AI, Data &amp; Autonomous Systems</span></span></a><nav aria-label="Main" data-astro-cid-nen7h5rs><a href="/" data-astro-cid-nen7h5rs>Home</a><a href="/insights/" class="active" aria-current="page" data-astro-cid-nen7h5rs>Insights</a><a href="/about/" data-astro-cid-nen7h5rs>About</a></nav></div></header><main data-astro-cid-hkbrpulz><article data-astro-cid-6ebbwsfy><header class="post-head container" data-astro-cid-6ebbwsfy><a class="back" href="/insights/" data-astro-cid-6ebbwsfy>← All insights</a><div class="tags" data-astro-cid-6ebbwsfy><a class="tag" href="/tags/ai/" data-astro-cid-6ebbwsfy>AI</a><a class="tag" href="/tags/llm/" data-astro-cid-6ebbwsfy>LLM</a><a class="tag" href="/tags/system-one/" data-astro-cid-6ebbwsfy>System One</a><a class="tag" href="/tags/jev/" data-astro-cid-6ebbwsfy>Jev</a><a class="tag" href="/tags/automation/" data-astro-cid-6ebbwsfy>Automation</a></div><h1 data-astro-cid-6ebbwsfy>System One Models and Jev — Fast, Typed Decisions for Software</h1><p class="desc" data-astro-cid-6ebbwsfy>Fast, typed, calibrated decisions for software. How System One models differ from LLMs, and where to use them.</p><div class="meta" data-astro-cid-6ebbwsfy><span data-astro-cid-6ebbwsfy>Chittapriya Mondal</span><span aria-hidden="true" data-astro-cid-6ebbwsfy>·</span><time datetime="2026-09-24T00:00:00.000Z" data-astro-cid-6ebbwsfy>Sep 24, 2026</time><span aria-hidden="true" data-astro-cid-6ebbwsfy>·</span><span data-astro-cid-6ebbwsfy>9 min read</span></div></header><div class="spacer" data-astro-cid-6ebbwsfy></div><div class="container layout" data-astro-cid-6ebbwsfy><div class="prose" id="content" data-astro-cid-6ebbwsfy><h2 id="the-problem-we-keep-using-essay-writers-as-if-statements">The Problem: We Keep Using Essay Writers as If-Statements</h2>
+<p>Large Language Models are remarkable at <em>thinking out loud</em>. They write, explain, reason and converse.
+But look at how most production software actually uses them:</p>
+<ul>
+<li><em>“Is this support ticket urgent?”</em> → parse <code>"yes"</code> out of a paragraph</li>
+<li><em>“Which queue should this go to?”</em> → hope the JSON is valid</li>
+<li><em>“Is this prompt a jailbreak?”</em> → retry when the model invents a new category</li>
+</ul>
+<p>In each case the program doesn’t want prose. It wants a <strong>decision</strong>: a boolean, a label or a score that it can branch on.
+We ask a text generator to write text, then parse that text back into a structure, validate it, and retry when it breaks.
+That round trip is slow, expensive and fragile.</p>
+<p><strong>System One models</strong>, introduced by <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">TypeSafe</a>, are built for this gap. <strong>Jev</strong> is the first of them.</p>
+<hr>
+<h2 id="what-is-a-system-one-model">What Is a System One Model?</h2>
+<p>The name comes from Daniel Kahneman’s two modes of thinking:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>System 1</strong></th>
+<th><strong>System 2</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Style</td>
+<td>Fast, intuitive, automatic</td>
+<td>Slow, deliberate, effortful</td>
+</tr>
+<tr>
+<td>Human example</td>
+<td>“That face looks angry”</td>
+<td>“What is 17 × 24?”</td>
+</tr>
+<tr>
+<td>AI analogue</td>
+<td><strong>System One models (Jev)</strong></td>
+<td><strong>LLMs with reasoning</strong></td>
+</tr>
+</tbody>
+</table>
+<p>TypeSafe describes System One models as</p>
+<blockquote>
+<p>“a new class of frontier models built to make fast, structured decisions that software can use directly.”</p>
+</blockquote>
+<p>A System One model does not generate text. You give it <strong>state</strong>, meaning the data your program already holds, and a set of <strong>typed questions</strong> that you define in advance. It returns <strong>typed answers with calibrated probabilities</strong>.</p>
+<p>TypeSafe calls it a <em>frontier-intelligence function call</em>:</p>
+<blockquote>
+<p><strong>Unstructured state in → typed probabilistic decisions out.</strong></p>
+</blockquote>
+<h2 id="what-is-jev">What Is Jev?</h2>
+<p><strong>Jev</strong> is TypeSafe’s first System One model. It is named after the economist <strong>William Stanley Jevons</strong>. The <em>Jevons paradox</em> says that when steam engines used coal more efficiently, total coal demand went <strong>up</strong>, not down. TypeSafe expects machine intelligence to follow the same path: when decisions become almost free and very fast, software will make far more of them.</p>
+<p>Jev is built on a stack designed for automation from the ground up:</p>
+<ul>
+<li><strong>A new model architecture</strong> that produces structured values rather than tokens</li>
+<li><strong>A parallel sampler</strong> that answers every question in a single hardware-aware pass</li>
+<li><strong>RLCD (Reinforcement Learning for Calibrated Decisions)</strong>, a training method that optimises for <em>epistemically honest probabilities</em> instead of human preference (RLHF) or verifiable rewards (RLVR)</li>
+</ul>
+<hr>
+<h2 id="architecture-how-a-request-flows">Architecture: How a Request Flows</h2>
+<p><img alt="System One Model (Jev) request flow and architecture" loading="lazy" decoding="async" width="2275" height="1073" src="/_astro/jev-architecture.Cr9R3r3F_ZrdAWi.webp"></p>
+<ol>
+<li><strong>Your application</strong> already holds some state: a support ticket, a database record, a log line, a game frame.</li>
+<li>It declares <strong>typed questions</strong> using three primitives (see below) and sends state and questions in <strong>one request</strong> to <code>POST /v1/systemone</code>.</li>
+<li><strong>Jev</strong> reads the state once and evaluates <strong>every question in parallel against that same state</strong>. The questions are independent, so a long list of them does not cause <em>context rot</em>.</li>
+<li>Outputs are <strong>type-constrained</strong>: the model can only return values that match the schema you declared.</li>
+<li>Each answer includes the <strong>value, the full probability distribution, and a confidence score</strong>.</li>
+<li><strong>Your code</strong> decides what to do. Above a confidence threshold, act automatically. Below it, escalate to an LLM (System 2) or to a human.</li>
+</ol>
+<h3 id="the-three-ai-primitives">The Three AI Primitives</h3>
+<table>
+<thead>
+<tr>
+<th>Primitive</th>
+<th>Question it answers</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Choice</strong></td>
+<td>“Pick one option from this list”</td>
+<td>chosen option + probability per option + confidence</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td>“Rate this state on a rubric”</td>
+<td>score + probability distribution + confidence</td>
+</tr>
+<tr>
+<td><strong>Noul</strong></td>
+<td>“Is this statement true?”</td>
+<td>a single number in <code>0–1</code>: the probability that the answer is <em>yes</em></td>
+</tr>
+</tbody>
+</table>
+<p>The design principle is <strong>atomic questions</strong>. Each question should ask one specific, well-scoped thing that a knowledgeable person could judge in a few seconds. Complex decisions are split into several small questions, and the <strong>logic that combines them lives in your code, not in a prompt</strong>.</p>
+<h3 id="what-it-looks-like-in-code">What It Looks Like in Code</h3>
+<pre class="astro-code github-light" style="background-color:#fff;color:#24292e; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#D73A49">from</span><span style="color:#24292E"> typesafe_sdk </span><span style="color:#D73A49">import</span><span style="color:#24292E"> Noul, NoulCriteria, TypeSafeClient</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">with</span><span style="color:#24292E"> TypeSafeClient() </span><span style="color:#D73A49">as</span><span style="color:#24292E"> client:</span></span>
+<span class="line"><span style="color:#24292E">    response </span><span style="color:#D73A49">=</span><span style="color:#24292E"> client.system_one(</span></span>
+<span class="line"><span style="color:#E36209">        model</span><span style="color:#D73A49">=</span><span style="color:#032F62">"jev-latest"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">        state</span><span style="color:#D73A49">=</span><span style="color:#032F62">"I have asked three times now. Can I please just talk to a real person?"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">        questions</span><span style="color:#D73A49">=</span><span style="color:#24292E">{</span></span>
+<span class="line"><span style="color:#032F62">            "is_human_escalation"</span><span style="color:#24292E">: Noul(</span></span>
+<span class="line"><span style="color:#E36209">                instructions</span><span style="color:#D73A49">=</span><span style="color:#032F62">"Is the customer asking for a human agent?"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">            ),</span></span>
+<span class="line"><span style="color:#032F62">            "is_repeat_contact"</span><span style="color:#24292E">: Noul(</span></span>
+<span class="line"><span style="color:#E36209">                instructions</span><span style="color:#D73A49">=</span><span style="color:#032F62">"Has the customer contacted support about this before?"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">                criteria</span><span style="color:#D73A49">=</span><span style="color:#24292E">NoulCriteria(</span></span>
+<span class="line"><span style="color:#E36209">                    true</span><span style="color:#D73A49">=</span><span style="color:#032F62">"Mentions a prior attempt, ticket, or that they have asked before"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">                    false</span><span style="color:#D73A49">=</span><span style="color:#032F62">"No sign of any previous contact"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">                ),</span></span>
+<span class="line"><span style="color:#24292E">            ),</span></span>
+<span class="line"><span style="color:#24292E">        },</span></span>
+<span class="line"><span style="color:#24292E">    )</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">    if</span><span style="color:#24292E"> response.answers[</span><span style="color:#032F62">"is_human_escalation"</span><span style="color:#24292E">].noul </span><span style="color:#D73A49">&gt;</span><span style="color:#005CC5"> 0.8</span><span style="color:#24292E">:</span></span>
+<span class="line"><span style="color:#24292E">        route_to_human_agent()</span></span></code></pre>
+<p>The code has no prompt template to maintain, no JSON parsing and no retry loop. The answer is already a number you can compare against a threshold.</p>
+<p><em>(Install with <code>pip install typesafe-sdk</code>, Python 3.10+. There is also a REST API and a playground at console.typesafe.ai.)</em></p>
+<hr>
+<h2 id="how-is-this-different-from-existing-llms">How Is This Different from Existing LLMs?</h2>
+<p><img alt="Decision pipeline: LLM vs System One model" loading="lazy" decoding="async" width="2355" height="1033" src="/_astro/llm-vs-system-one.C9uakTxE_10L6Mj.webp"></p>
+<p>An LLM path has several extra steps: serialise the context into a prompt, decode token by token, get a string back, parse and validate it, and retry if it is wrong. The System One path is shorter: state and schema go in, a single parallel pass runs, and typed values come out.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>LLMs</th>
+<th>System One (Jev)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training objective</strong></td>
+<td>RLHF / RLVR, optimised for human preference</td>
+<td>RLCD, optimised for <em>calibrated decisions</em></td>
+</tr>
+<tr>
+<td><strong>Input</strong></td>
+<td>Sequential messages (chat)</td>
+<td>Structured program state</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>Strings: flexible but unpredictable</td>
+<td>Type-safe structured values</td>
+</tr>
+<tr>
+<td><strong>Generation</strong></td>
+<td>Sequential, one token at a time</td>
+<td>Parallel, all outputs in one pass</td>
+</tr>
+<tr>
+<td><strong>Latency</strong> (vendor-reported)</td>
+<td>~3 s to 329 s end-to-end</td>
+<td>~70 ms to 500 ms</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>Output tokens ~5× the input price</td>
+<td>Input $0.042 / MTok; output “too cheap to meter”</td>
+</tr>
+<tr>
+<td><strong>Type errors / hallucinated labels</strong></td>
+<td>Possible even with careful prompting</td>
+<td>Impossible by construction: outputs are restricted to the declared schema</td>
+</tr>
+<tr>
+<td><strong>Confidence</strong></td>
+<td>Often overconfident and inconsistent</td>
+<td>Calibrated: higher confidence means higher accuracy, and similar inputs give similar answers</td>
+</tr>
+<tr>
+<td><strong>Best at</strong></td>
+<td>Writing, chat, open-ended reasoning, agents</td>
+<td>Classify, route, score, extract, verify, at scale</td>
+</tr>
+</tbody>
+</table>
+<p>TypeSafe reports that on its workflow evaluations Jev reaches <strong>similar accuracy to frontier LLMs on System One-style tasks while being about two orders of magnitude faster and cheaper</strong>. At the high end they cite about <strong>193× faster and 444× cheaper</strong>. The reference answers came from averaging frontier LLMs (GPT-6 Astra and Fable 5.1).</p>
+<hr>
+<h2 id="advantages">Advantages</h2>
+<ol>
+<li><strong>Speed you can put in a UX path.</strong> Around 100 ms is fast enough for inline, user-facing features such as autocomplete-style routing, live moderation or in-game bots. TypeSafe’s Doom demo runs at 10 decisions per second.</li>
+<li><strong>Cost that changes the economics.</strong> When output is effectively free and input is cheap, you can run AI over every row, log line or event instead of a sample.</li>
+<li><strong>No type errors and no invented categories.</strong> The model cannot return a label you did not define. For systems with latency guarantees, one malformed response can be a deal-breaker, and this removes that failure mode.</li>
+<li><strong>Calibrated confidence is a control knob.</strong> You can set thresholds such as “auto-approve above 0.95, send to review between 0.6 and 0.95, reject below 0.6”, then tune precision and recall like any other classifier.</li>
+<li><strong>Consistency.</strong> Similar inputs produce similar answers, which makes behaviour easier to test and audit than sampled free text.</li>
+<li><strong>Composable, testable logic.</strong> Atomic questions combined in ordinary code are easier to unit-test, version and reason about than a single large prompt.</li>
+<li><strong>No context rot.</strong> Each question is evaluated independently against the same state, so adding the 20th question doesn’t degrade the first.</li>
+</ol>
+<h2 id="disadvantages-and-limitations">Disadvantages and Limitations</h2>
+<ol>
+<li><strong>No text generation.</strong> It cannot write, summarise, explain or chat. That trade-off is deliberate, but it rules out a large set of LLM use cases.</li>
+<li><strong>Decisions must be pre-defined.</strong> You need to know the output space in advance. Open-ended questions (“what is wrong with this code?”) don’t fit.</li>
+<li><strong>Cardinality limit.</strong> A Choice supports up to <strong>255 options</strong>. Larger label spaces need a two-stage (hierarchical) setup.</li>
+<li><strong>Text-only state for now.</strong> Images and other modalities are not yet supported.</li>
+<li><strong>Not a reasoner.</strong> It is System 1 by design. Multi-step reasoning, planning and tool use are still LLM territory.</li>
+<li><strong>Benchmarks are vendor-reported.</strong> TypeSafe acknowledges that its evals were run by its own team from the US West Coast, so there may be bias. Validate on your own data before relying on the numbers.</li>
+<li><strong>Question design becomes the new prompt engineering.</strong> Accuracy depends on well-scoped, atomic questions and clear criteria. Poorly decomposed questions still give poor answers, just typed ones.</li>
+<li><strong>Calibrated does not mean correct.</strong> A 0.7 is still wrong 30% of the time. You still need thresholds, fallbacks and monitoring.</li>
+<li><strong>A new vendor and API.</strong> It is a separate model family and platform, which brings the usual questions about lock-in, data residency and maturity.</li>
+</ol>
+<hr>
+<h2 id="use-cases-where-system-one-models-fit">Use Cases: Where System One Models Fit</h2>
+<p>The rule of thumb is: <strong>if the answer is a label, a score or a yes/no, and you need it fast or at volume, it’s a System One task.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Example questions</th>
+<th>Primitive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Customer support triage</strong></td>
+<td>Is this urgent? Which team owns it? Is the customer asking for a human?</td>
+<td>Noul, Choice</td>
+</tr>
+<tr>
+<td><strong>Smart if-statements in workflows</strong></td>
+<td>Should this invoice be auto-approved? Does this PR touch security-sensitive code?</td>
+<td>Noul, Choice</td>
+</tr>
+<tr>
+<td><strong>Content moderation &amp; trust/safety</strong></td>
+<td>Is this post harassment? How severe, on a 1–5 rubric?</td>
+<td>Noul, Score</td>
+</tr>
+<tr>
+<td><strong>LLM guardrails &amp; jailbreak detection</strong></td>
+<td>Is this prompt a jailbreak attempt? Does this answer leak PII?</td>
+<td>Noul</td>
+</tr>
+<tr>
+<td><strong>LLM-as-a-judge / evaluation</strong></td>
+<td>Score this response for faithfulness, relevance and tone</td>
+<td>Score</td>
+</tr>
+<tr>
+<td><strong>Large-scale data labelling &amp; feature extraction</strong></td>
+<td>Categorise millions of records, reviews or log lines into features</td>
+<td>Choice, Score</td>
+</tr>
+<tr>
+<td><strong>Lead scoring &amp; sales ops</strong></td>
+<td>How likely is this lead to convert? Which segment is it in?</td>
+<td>Score, Choice</td>
+</tr>
+<tr>
+<td><strong>Real-time applications &amp; games</strong></td>
+<td>Which action should the agent take this frame? (the Doom demo)</td>
+<td>Choice</td>
+</tr>
+<tr>
+<td><strong>Search, ranking &amp; routing</strong></td>
+<td>Which of these links best moves toward the goal? (the Wikiracing demo)</td>
+<td>Choice</td>
+</tr>
+<tr>
+<td><strong>Fraud &amp; anomaly flagging</strong></td>
+<td>Does this transaction pattern look suspicious?</td>
+<td>Noul</td>
+</tr>
+<tr>
+<td><strong>Model routing (System 1 → System 2)</strong></td>
+<td>Is this query simple enough to answer cheaply, or does it need a reasoning LLM?</td>
+<td>Noul, Choice</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pattern-system-1--system-2-together">Pattern: System 1 + System 2 Together</h3>
+<p>The most practical architecture uses both kinds of model rather than picking one:</p>
+<ol>
+<li><strong>Jev handles the 90% case</strong>: fast, cheap, typed decisions on every event.</li>
+<li>When <strong>confidence is low</strong>, the item escalates to an <strong>LLM</strong> (System 2) or a <strong>human</strong>.</li>
+<li>The LLM does what it is good at: reasoning, explaining and writing.</li>
+</ol>
+<p>This is the same split humans use. Most of the day runs on fast intuition, and slow deliberation is saved for the cases that need it.</p>
+<h3 id="where-not-to-use-it">Where Not to Use It</h3>
+<ul>
+<li>Creative writing, summarisation, drafting emails</li>
+<li>Conversational assistants and chatbots</li>
+<li>Code generation, multi-step planning, agentic tool use</li>
+<li>Any task where you cannot list the possible answers in advance</li>
+</ul>
+<hr>
+<h2 id="closing-thoughts">Closing Thoughts</h2>
+<p>For the last few years the default has been <em>“use an LLM for everything.”</em> System One models challenge that. Much of what software needs from AI is not language but <strong>judgement</strong>: quick, typed, confidence-scored decisions that plug into ordinary <code>if</code> statements.</p>
+<p>If TypeSafe’s numbers hold up on real workloads, the Jevons comparison may turn out to be accurate. When a decision costs a fraction of a cent and takes 100 ms, teams will add AI to many parts of their systems where it is currently too slow or too expensive.</p>
+<p>The sensible starting point is to take one high-volume, well-defined decision in your system, write it as a few atomic questions, and benchmark Jev against your current LLM call on <strong>your own data</strong>.</p>
+<hr>
+<h2 id="references">References</h2>
+<ul>
+<li>TypeSafe — <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev">Introducing System One Models and Jev</a></li>
+<li>TypeSafe Docs — <a href="https://docs.typesafe.ai/introduction">Introduction</a></li>
+<li>Daniel Kahneman — <em>Thinking, Fast and Slow</em> (2011)</li>
+</ul>
+</div><aside class="toc" aria-label="On this page" data-astro-cid-6ebbwsfy><p class="toc-title" data-astro-cid-6ebbwsfy>On this page</p><ul data-astro-cid-6ebbwsfy><li class="d2" data-astro-cid-6ebbwsfy><a href="#the-problem-we-keep-using-essay-writers-as-if-statements" data-astro-cid-6ebbwsfy>The Problem: We Keep Using Essay Writers as If-Statements</a></li><li class="d2" data-astro-cid-6ebbwsfy><a href="#what-is-a-system-one-model" data-astro-cid-6ebbwsfy>What Is a System One Model?</a></li><li class="d2" data-astro-cid-6ebbwsfy><a href="#what-is-jev" data-astro-cid-6ebbwsfy>What Is Jev?</a></li><li class="d2" data-astro-cid-6ebbwsfy><a href="#architecture-how-a-request-flows" data-astro-cid-6ebbwsfy>Architecture: How a Request Flows</a></li><li class="d3" data-astro-cid-6ebbwsfy><a href="#the-three-ai-primitives" data-astro-cid-6ebbwsfy>The Three AI Primitives</a></li><li class="d3" data-astro-cid-6ebbwsfy><a href="#what-it-looks-like-in-code" data-astro-cid-6ebbwsfy>What It Looks Like in Code</a></li><li class="d2" data-astro-cid-6ebbwsfy><a href="#how-is-this-different-from-existing-llms" data-astro-cid-6ebbwsfy>How Is This Different from Existing LLMs?</a></li><li class="d2" data-astro-cid-6ebbwsfy><a href="#advantages" data-astro-cid-6ebbwsfy>Advantages</a></li><li class="d2" data-astro-cid-6ebbwsfy><a href="#disadvantages-and-limitations" data-astro-cid-6ebbwsfy>Disadvantages and Limitations</a></li><li class="d2" data-astro-cid-6ebbwsfy><a href="#use-cases-where-system-one-models-fit" data-astro-cid-6ebbwsfy>Use Cases: Where System One Models Fit</a></li><li class="d3" data-astro-cid-6ebbwsfy><a href="#pattern-system-1--system-2-together" data-astro-cid-6ebbwsfy>Pattern: System 1 + System 2 Together</a></li><li class="d3" data-astro-cid-6ebbwsfy><a href="#where-not-to-use-it" data-astro-cid-6ebbwsfy>Where Not to Use It</a></li><li class="d2" data-astro-cid-6ebbwsfy><a href="#closing-thoughts" data-astro-cid-6ebbwsfy>Closing Thoughts</a></li><li class="d2" data-astro-cid-6ebbwsfy><a href="#references" data-astro-cid-6ebbwsfy>References</a></li></ul></aside></div><nav class="container pager" aria-label="More posts" data-astro-cid-6ebbwsfy><span data-astro-cid-6ebbwsfy></span><a href="/insights/agent-autonomy/" class="older" data-astro-cid-6ebbwsfy><span data-astro-cid-6ebbwsfy>Older →</span>Autonomy in Modern AI Systems</a></nav></article></main><footer class="site-footer" data-astro-cid-hkbrpulz><div class="container" data-astro-cid-hkbrpulz><span data-astro-cid-hkbrpulz>© 2026 Chittapriya Mondal</span></div></footer></body></html><script type="module" src="/_astro/_slug_.astro_astro_type_script_index_0_lang.B2s63C-R.js"></script>
